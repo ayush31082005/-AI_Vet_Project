@@ -3,7 +3,8 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Link, NavLink, Navigate, useNavigate } from 'react-router-dom';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import { PawPrint, Heart, Calendar, LayoutDashboard, Stethoscope, MessageCircle, FileText, User, Menu, X, ArrowRight, Plus, LogOut, Sparkles } from 'lucide-react';
-export const base = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const rawBase = (import.meta.env.VITE_API_URL || 'http://localhost:5000/api').trim().replace(/\/+$/, '');
+export const base = rawBase.endsWith('/api') ? rawBase : `${rawBase}/api`;
 export const endpoints = { pets: '/pets', doctors: '/doctors', appointments: '/appointments/mine', prescriptions: '/prescriptions/mine', medical: '/medical-history/mine', dashboard: '/dashboard/owner', models: '/ai/models', chat: '/ai/chat/message', history: '/ai/chat/conversations' };
 export async function api(path, method = 'GET', body) {
     const token = localStorage.getItem('vetToken');
