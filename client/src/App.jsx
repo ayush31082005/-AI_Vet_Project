@@ -48,7 +48,7 @@ const petownerLinks = [
     ["Dashboard", "/app/dashboard"],
     ["My pets", "/app/pets"],
     ["Doctors", "/app/doctors"],
-    ["Appointments", "/app/appointments"],
+    // ["Appointments", "/app/appointments"],
     ["Prescriptions", "/app/prescriptions"],
     ["Medical history", "/app/medical"],
     ["AI assistant", "/app/ai"],
