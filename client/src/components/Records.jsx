@@ -368,9 +368,6 @@ export function AppointmentCard({ appointment }) {
       <h3 className="mt-3 text-base font-bold text-[#22262E]">
         {appointment.pet?.petName ?? appointment.petDetails?.petName ?? 'Appointment'}
       </h3>
-      <p className="mt-1 text-sm text-[#343E4E]">
-        Doctor: {appointment.doctor?.user?.fullName || 'Name unavailable'}
-      </p>
       <p className="mt-1 text-xs text-[#5C6470]">
         {new Date(appointment.scheduledAt).toLocaleString()}
       </p>
