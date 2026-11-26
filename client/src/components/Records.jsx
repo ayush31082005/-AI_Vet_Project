@@ -31,7 +31,7 @@ const fields = {
     'vaccinationStatus',
     'medicalHistory',
   ],
-  appointments: ['petId', 'doctorId', 'scheduledAt', 'reason'],
+  // appointments: ['petId', 'doctorId', 'scheduledAt', 'reason'],
 };
 
 const petOptions = {

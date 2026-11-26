@@ -44,7 +44,15 @@ export function DashboardLayout({ links }) {
     const { user, logout } = useAuth();
     return <div className="shell"><Sidebar links={links} open={open} close={() => setOpen(false)} logout={logout}/><main className="workspace"><Topbar user={user} toggle={() => setOpen(!open)}/><Outlet /></main></div>;
 }
-const petownerLinks = [["Dashboard", "/app/dashboard"], ["My pets", "/app/pets"], ["Doctors", "/app/doctors"], ["Appointments", "/app/appointments"], ["Prescriptions", "/app/prescriptions"], ["Medical history", "/app/medical"], ["AI assistant", "/app/ai"], ["Profile", "/app/profile"]];
+const petownerLinks = [
+    ["Dashboard", "/app/dashboard"],
+    ["My pets", "/app/pets"],
+    ["Appointments", "/app/appointments"],
+    ["Prescriptions", "/app/prescriptions"],
+    ["Medical history", "/app/medical"],
+    ["AI assistant", "/app/ai"],
+    ["Profile", "/app/profile"],
+];
 export function PetOwnerLayout() { return <DashboardLayout links={petownerLinks}/>; }
 const doctorLinks = [["Dashboard", "/doctor/dashboard"], ["Appointments", "/doctor/appointments"], ["Create prescription", "/doctor/prescriptions/create"], ["Profile", "/doctor/profile"]];
 export function DoctorLayout() { return <DashboardLayout links={doctorLinks}/>; }
