@@ -47,6 +47,7 @@ export function DashboardLayout({ links }) {
 const petownerLinks = [
     ["Dashboard", "/app/dashboard"],
     ["My pets", "/app/pets"],
+    ["Doctors", "/app/doctors"],
     ["Appointments", "/app/appointments"],
     ["Prescriptions", "/app/prescriptions"],
     ["Medical history", "/app/medical"],
